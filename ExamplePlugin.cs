@@ -34,14 +34,14 @@ namespace btbplugin
          }
       }
 
-      public PluginResponse ValidateParameters(string[] args)
+      public PluginResponse ValidateParameters(string command, string[] args)
       {
          if (args.Length < 1)
             return PluginResponse.Help;
          return PluginResponse.Accept;
       }
 
-      public bool Execute(out string message, User usr, string[] args)
+      public bool Execute(out string message, string command, User usr, string[] args)
       {
          message = usr.displayName + ": Here is an example response, you have " + usr.points + "points.";
          message += " This command has been ran a total of " + count++ + " times.";
