@@ -64,7 +64,7 @@ namespace btbplugin
          return exampleStream.GetBuffer();
       }
 
-      public void Load(byte[] data)
+      public void Load(byte[] data, IBtbInterface ignored)
       {
          // Example
          MemoryStream exampleStream = new MemoryStream(data, false);
